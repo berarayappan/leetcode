@@ -1,7 +1,11 @@
 class Solution:
     def reverseString(self, s: list[str]) -> None:
-        l, r = 0, len(s) - 1
+        stack =[]
 
-        while l < r:
-            s[l], s[r] = s[r], s[l]
-            l, r = l + 1, r - 1
+        for ch in s:
+            stack.append(ch)
+
+        i=0
+        while stack:
+            s[i] =stack.pop()
+            i +=1
